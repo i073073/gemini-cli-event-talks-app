@@ -3,6 +3,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const searchInput = document.getElementById('searchInput');
     let talksData = [];
 
+    const loadingMessage = document.getElementById('loadingMessage');
+
     // Define the full schedule structure including breaks
     const scheduleLayout = [
         { type: 'talk', index: 0 },
@@ -19,11 +21,23 @@ document.addEventListener('DOMContentLoaded', () => {
     ];
 
     // Fetch talk data
+    loadingMessage.classList.remove('hidden'); // Show loading message
     fetch('/api/talks')
-        .then(response => response.json())
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            return response.json();
+        })
         .then(data => {
             talksData = data;
             renderSchedule(talksData);
+            loadingMessage.classList.add('hidden'); // Hide loading message
+        })
+        .catch(error => {
+            console.error('Error fetching talks data:', error);
+            loadingMessage.textContent = '일정을 불러오는데 실패했습니다. 잠시 후 다시 시도해주세요.'; // Display error
+            loadingMessage.style.color = 'red';
         });
 
     // Search functionality
