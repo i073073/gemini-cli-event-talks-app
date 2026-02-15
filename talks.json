@@ -1,0 +1,44 @@
+[
+    {
+        "time": "10:00 AM - 11:00 AM",
+        "title": "The Future of JavaScript Frameworks",
+        "speakers": ["Jane Doe"],
+        "categories": ["JavaScript", "Frontend", "WebDev"],
+        "description": "A deep dive into the evolving landscape of frontend frameworks and what to expect in the coming years."
+    },
+    {
+        "time": "11:10 AM - 12:10 PM",
+        "title": "Building Scalable APIs with Node.js",
+        "speakers": ["John Smith"],
+        "categories": ["Node.js", "Backend", "API"],
+        "description": "Learn how to design and build APIs that can handle millions of requests without breaking a sweat."
+    },
+    {
+        "time": "12:20 PM - 01:20 PM",
+        "title": "Mastering CSS Grid and Flexbox",
+        "speakers": ["Emily White", "Chris Green"],
+        "categories": ["CSS", "Frontend", "Design"],
+        "description": "Unlock the power of modern CSS layouts and create responsive designs with ease."
+    },
+    {
+        "time": "02:20 PM - 03:20 PM",
+        "title": "Introduction to Machine Learning with Python",
+        "speakers": ["David Black"],
+        "categories": ["Python", "Machine Learning", "AI"],
+        "description": "A beginner-friendly introduction to the world of machine learning using Python and popular libraries."
+    },
+    {
+        "time": "03:30 PM - 04:30 PM",
+        "title": "DevOps for Dummies: CI/CD Pipelines",
+        "speakers": ["Sarah Brown"],
+        "categories": ["DevOps", "CI/CD", "Cloud"],
+        "description": "Understand the fundamentals of DevOps and learn how to set up a continuous integration and deployment pipeline."
+    },
+    {
+        "time": "04:40 PM - 05:40 PM",
+        "title": "The Art of Debugging",
+        "speakers": ["Michael Blue"],
+        "categories": ["General", "Productivity", "Debugging"],
+        "description": "Effective strategies and tools for squashing bugs and writing more robust code."
+    }
+]
