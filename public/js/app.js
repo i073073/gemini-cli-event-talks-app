@@ -36,7 +36,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 return; // Always show breaks
             }
             const categories = item.dataset.categories.toLowerCase();
-            if (categories.includes(searchTerm)) {
+            const speakers = item.dataset.speakers.toLowerCase();
+            if (categories.includes(searchTerm) || speakers.includes(searchTerm)) {
                 item.classList.remove('hidden');
             } else {
                 item.classList.add('hidden');
@@ -55,6 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     const talkElement = document.createElement('div');
                     talkElement.className = 'schedule-item';
                     talkElement.dataset.categories = talk.categories.join(', ');
+                    talkElement.dataset.speakers = talk.speakers.join(', ');
 
                     talkElement.innerHTML = `
                         <div class="schedule-item-time">${talk.time}</div>
